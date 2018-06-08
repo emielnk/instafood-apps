@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-row>
+    <ion-col>
+      <ion-navbar>
+        <ion-title>Home</ion-title>
+      </ion-navbar>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-only (click)="logOut()">Logout
+            <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-col>    
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  
+    <ion-card *ngFor="let resep of reseps" (click) = "goResepDetail(resep.id)"> 
+        <ion-item >
+          <h2>{{resep?.namaresep}}</h2>
+        </ion-item>
+
+        <img src="img/advance-card-bttf.png">
+
+        <ion-card-content>
+          <h2>Bahan-bahan</h2>
+          <p>{{resep?.bahan}}</p>
+        </ion-card-content>
+
+        <ion-row>
+          <ion-col center text-center>
+            <button ion-button icon-left clear>Selengkapnya
+              <ion-icon name="text"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+  </ion-content>
+
+<ion-footer>
+  <ion-navbar color="danger">
+  <ion-toolbar>
+    <div>
+      <ion-row>
+        <ion-col>
+            <button ion-button icon-only>
+              <ion-icon name="home"></ion-icon>
+            </button>
+        </ion-col>
+
+        <ion-col center text="center">
+            <button ion-button icon-only (click) ="goMakePost()">
+              <ion-icon name="contact"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col>
+            <button ion-button icon-only (click)="goProfile()">
+              <ion-icon name="person"></ion-icon>
+            </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-toolbar>
+  </ion-navbar>
+</ion-footer>

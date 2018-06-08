@@ -1,0 +1,49 @@
+<!--
+  Generated template for the DetailPostPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detail Resep</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h4>Nama Resep</h4>
+  <ion-item>
+    <h2>{{currentPost?.namaresep}}</h2>
+  </ion-item>
+  <h4>Nama Pembuat</h4>
+  <ion-item>
+    <h2>{{currentMakers?.username}}</h2>
+  </ion-item>
+
+  <ion-card> 
+        <img src="img/advance-card-bttf.png">
+        <ion-row>
+        <ion-col>
+        <ion-card-content>
+          <h2>Bahan-bahan</h2>
+          <p>{{currentPost?.bahan}}</p>
+        </ion-card-content>
+        </ion-col>
+        <ion-col>
+        <ion-card-content>
+          <h2>Alat-alat</h2>
+          <p>{{currentPost?.alat}}</p>
+        </ion-card-content>
+        </ion-col>
+        <ion-col>
+        <ion-card-content>
+          <h2>Langkah Membuat</h2>
+          <p>{{currentPost?.langkah}}</p>
+        </ion-card-content>
+        </ion-col>
+        </ion-row>
+      </ion-card>
+</ion-content>

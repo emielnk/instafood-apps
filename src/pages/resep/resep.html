@@ -1,0 +1,55 @@
+<!--
+  Generated template for the Signup page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Buat Resep</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <span *ngIf="resepImage">Picture taken!</span>
+    <button ion-button color="primary" block (click)="takePicture()">
+      Take a Picture
+    </button>
+  <form [formGroup]="myForm" (submit)="makePost()" novalidate>
+    <ion-item>
+      <ion-label stacked>Nama Resep</ion-label>
+      <ion-input #namaResep formControlName="namaResep" type="string" placeholder="Nama Resep">
+      </ion-input>
+    </ion-item>
+  
+
+    <ion-item>
+      <ion-label stacked>Bahan-bahan</ion-label>
+        <ion-input #bahan formControlName="bahan" type="string" placeholder="Bahan Masakan">
+        </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Alat-alat</ion-label>
+      <ion-input #alat formControlName="alat" type="string" placeholder="Alat yang dibutuhkan">
+      </ion-input>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label stacked>Langkah pembuatan</ion-label>
+      <ion-input #langkah formControlName="langkah" type="any" placeholder="langkah yang dilakukan">
+      </ion-input>
+    </ion-item>
+    
+    <button ion-button block type="submit">
+      Buat Resep
+    </button>
+  </form>
+
+ 
+
+</ion-content>

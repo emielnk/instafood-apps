@@ -1,0 +1,71 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-navbar>
+    <ion-title>
+      Description
+    </ion-title>
+    </ion-navbar>
+    <ion-buttons start>  
+      <ion-row>
+        <button ion-button>
+          edit profile
+        </button>
+      </ion-row>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="">
+        </ion-avatar>
+        <h2>{{users?.username}}</h2>
+        <p>{{users?.email}}</p>
+      </ion-item>
+
+      <ion-item>
+        {{users?.username}}
+        <ion-note item-end>
+        </ion-note>
+      </ion-item>
+  </ion-list>
+  <ion-card *ngFor="let resepuser of resepinuser"> 
+        <ion-item >
+          <h2>{{resepuser?.namaresep}}</h2>
+        </ion-item>
+        <img src="img/advance-card-bttf.png">
+      </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-navbar color="danger">
+  <ion-toolbar>
+    <div>
+      <ion-row>
+        <ion-col>
+            <button ion-button icon-only (click) = "goHome()">
+              <ion-icon name="home"></ion-icon>
+            </button>
+        </ion-col>
+
+        <ion-col center text="center">
+            <button ion-button icon-only (click) ="goMakePost()">
+              <ion-icon name="contact"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col>
+            <button ion-button icon-only>
+              <ion-icon name="person"></ion-icon>
+            </button>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+  </ion-toolbar>
+  </ion-navbar>
+</ion-footer>
